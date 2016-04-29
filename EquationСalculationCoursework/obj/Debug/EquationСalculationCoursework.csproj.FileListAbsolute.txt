@@ -1,0 +1,9 @@
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\bin\Debug\EquationСalculationCoursework.exe.config
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\bin\Debug\EquationСalculationCoursework.exe
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\bin\Debug\EquationСalculationCoursework.pdb
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.csprojResolveAssemblyReference.cache
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.Form1.resources
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.Properties.Resources.resources
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.csproj.GenerateResource.Cache
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.exe
+C:\Users\shved\Desktop\игры\Курсач\EquationСalculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.pdb
