@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EquationСalculationCoursework
 {
-    class math
+/* class math
     {
         public static string culc()
         {
-            double a = -10;
+            double a = 10;
             double b = 100;
             double eps = 0.0001;
             double x = method_chord(a, b, eps);
@@ -18,7 +22,13 @@ namespace EquationСalculationCoursework
         }
         public static double f(double x)
         {
-            return x * x - 5 * x + 2;
+
+           
+            string str = Data.Value.Replace("x", x.ToString());
+            str = str.Replace("+-", "-");
+            str = str.Replace("-+", "-");
+            double z = Math.Round(Parser.Eval(Data.Value.ToCharArray()));
+            return z;
         }
 
         public static double method_chord(double a, double b, double eps)
@@ -38,5 +48,16 @@ namespace EquationСalculationCoursework
 
 
 
-    }
+    }*/
+    class Data
+    {
+        public static double a { get; set; }
+        public static double b { get; set; }
+        public static double c { get; set; }
+        public static double eps { get; set; }
+        public static double A { get; set; }
+        public static double B { get; set; }
+        public static double C { get; set; }
+        public static double D { get; set; }
+        }
 }

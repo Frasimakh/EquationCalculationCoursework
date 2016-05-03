@@ -11,8 +11,8 @@ D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\bin\Debug
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.exe
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.pdb
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.csprojResolveAssemblyReference.cache
-D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.Form1.resources
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.Properties.Resources.resources
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.csproj.GenerateResource.Cache
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\bin\Debug\EquationСalculationCoursework.exe
 D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\bin\Debug\EquationСalculationCoursework.pdb
+D:\GitHub\Equation-alculationCoursework\EquationСalculationCoursework\obj\Debug\EquationСalculationCoursework.Form1.resources
