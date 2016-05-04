@@ -55,15 +55,15 @@ namespace EquationСalculationCoursework
             double Xk = 0;
             double XkNew = 0;
             double XkOld = 0;
+            int i = 0;
+            double delta;
             gridHord.Rows.Clear();
             bool formula;
             if (f(Data.a) * fss(Data.a) > 0) formula = true;
             else formula = false;
-            int i = 0;
             if (formula) Xk = Data.b;
             else Xk = Data.a;
             bool end = true;
-            double delta;
             while (end)
             {
                 double fXk = f(Xk);
@@ -80,9 +80,5 @@ namespace EquationСalculationCoursework
 
             }
         }
-
-
-
-
     }
 }

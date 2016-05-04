@@ -33,6 +33,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHord = new System.Windows.Forms.TabPage();
             this.gridHord = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDichotomy = new System.Windows.Forms.TabPage();
             this.tabNewthon = new System.Windows.Forms.TabPage();
             this.bInt = new System.Windows.Forms.TextBox();
@@ -47,10 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabHord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).BeginInit();
@@ -69,7 +69,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 540);
+            this.textBox1.Location = new System.Drawing.Point(143, 451);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(155, 20);
             this.textBox1.TabIndex = 1;
@@ -113,29 +113,56 @@
             this.gridHord.Size = new System.Drawing.Size(644, 316);
             this.gridHord.TabIndex = 3;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "k";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Xk";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "∆";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 42;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "f(Xk)";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 59;
+            // 
             // tabDichotomy
             // 
-            this.tabDichotomy.Location = new System.Drawing.Point(4, 22);
+            this.tabDichotomy.Location = new System.Drawing.Point(4, 25);
             this.tabDichotomy.Name = "tabDichotomy";
             this.tabDichotomy.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDichotomy.Size = new System.Drawing.Size(272, 255);
+            this.tabDichotomy.Size = new System.Drawing.Size(321, 252);
             this.tabDichotomy.TabIndex = 0;
             this.tabDichotomy.Text = "Метод дихотомії";
             this.tabDichotomy.UseVisualStyleBackColor = true;
             // 
             // tabNewthon
             // 
-            this.tabNewthon.Location = new System.Drawing.Point(4, 22);
+            this.tabNewthon.Location = new System.Drawing.Point(4, 25);
             this.tabNewthon.Name = "tabNewthon";
             this.tabNewthon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNewthon.Size = new System.Drawing.Size(272, 255);
+            this.tabNewthon.Size = new System.Drawing.Size(321, 252);
             this.tabNewthon.TabIndex = 1;
             this.tabNewthon.Text = "Метод ньютона";
             this.tabNewthon.UseVisualStyleBackColor = true;
             // 
             // bInt
             // 
-            this.bInt.Location = new System.Drawing.Point(779, 153);
+            this.bInt.Location = new System.Drawing.Point(774, 153);
             this.bInt.Name = "bInt";
             this.bInt.Size = new System.Drawing.Size(26, 20);
             this.bInt.TabIndex = 12;
@@ -187,7 +214,7 @@
             this.eps.Name = "eps";
             this.eps.Size = new System.Drawing.Size(49, 20);
             this.eps.TabIndex = 13;
-            this.eps.Text = "0,01";
+            this.eps.Text = "0,001";
             // 
             // label1
             // 
@@ -240,33 +267,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(272, 40);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "k";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Xk";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "∆";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 42;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "f(Xk)";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 59;
             // 
             // Form1
             // 
