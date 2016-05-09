@@ -27,14 +27,14 @@ namespace EquationСalculationCoursework
             Data.C = Convert.ToDouble(cCoeff.Text);
             Data.D = Convert.ToDouble(dCoeff.Text);
             Data.eps = Convert.ToDouble(eps.Text);
+            Derivative obj = new Derivative();
+            Data.f_a = f(Data.a);
+            Data.f_b = f(Data.b);
+            Data.fs_a = fs(Data.a);
+            Data.fs_b = fs(Data.b);
+            Data.fss_a = fss(Data.a);
+            Data.fss_b = fss(Data.b);
             Hord();
-
-            /*Data.Value=textBox1.Text;
-           MessageBox.Show(math.culc());
-            MessageBox.Show(Data.Value);
-           string str = Parser.Eval(Data.Value.Replace("x", "55").ToCharArray()).ToString();
-            MessageBox.Show(str); */
-
         }
         private double f(double x)
         {
@@ -79,6 +79,11 @@ namespace EquationСalculationCoursework
                 i++;
 
             }
+        }
+
+        private void степіньРіняToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,15 +51,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.степіньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ийСтепіньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ийСтепіньToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ийСтепіньToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabHord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(336, 540);
+            this.button1.Location = new System.Drawing.Point(496, 253);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -268,11 +276,63 @@
             this.dataGridView1.Size = new System.Drawing.Size(272, 40);
             this.dataGridView1.TabIndex = 15;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.степіньToolStripMenuItem,
+            this.очиститиToolStripMenuItem,
+            this.вихідToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(831, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // степіньToolStripMenuItem
+            // 
+            this.степіньToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ийСтепіньToolStripMenuItem,
+            this.ийСтепіньToolStripMenuItem1,
+            this.ийСтепіньToolStripMenuItem2});
+            this.степіньToolStripMenuItem.Name = "степіньToolStripMenuItem";
+            this.степіньToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.степіньToolStripMenuItem.Text = "Степінь рівняння";
+            // 
+            // ийСтепіньToolStripMenuItem
+            // 
+            this.ийСтепіньToolStripMenuItem.Name = "ийСтепіньToolStripMenuItem";
+            this.ийСтепіньToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ийСтепіньToolStripMenuItem.Text = "4-ий степінь";
+            // 
+            // ийСтепіньToolStripMenuItem1
+            // 
+            this.ийСтепіньToolStripMenuItem1.Name = "ийСтепіньToolStripMenuItem1";
+            this.ийСтепіньToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ийСтепіньToolStripMenuItem1.Text = "3-ий степінь";
+            // 
+            // ийСтепіньToolStripMenuItem2
+            // 
+            this.ийСтепіньToolStripMenuItem2.Name = "ийСтепіньToolStripMenuItem2";
+            this.ийСтепіньToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.ийСтепіньToolStripMenuItem2.Text = "2-ий степінь";
+            // 
+            // очиститиToolStripMenuItem
+            // 
+            this.очиститиToolStripMenuItem.Name = "очиститиToolStripMenuItem";
+            this.очиститиToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.очиститиToolStripMenuItem.Text = "Очистити";
+            // 
+            // вихідToolStripMenuItem
+            // 
+            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.вихідToolStripMenuItem.Text = "Вихід";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 594);
+            this.ClientSize = new System.Drawing.Size(831, 502);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -288,12 +348,16 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "EquationСalculation";
             this.tabControl1.ResumeLayout(false);
             this.tabHord.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,6 +388,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem степіньToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ийСтепіньToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ийСтепіньToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ийСтепіньToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem очиститиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
     }
 }
 

@@ -20,5 +20,13 @@ namespace EquationСalculationCoursework
         public static double B { get; set; }
         public static double C { get; set; }
         public static double D { get; set; }
-        }
+        public static double f_a { get; set; }
+        public static double f_b { get; set; }
+        public static double fs_a { get; set; }
+        public static double fs_b { get; set; }
+        public static double fss_a { get; set; }
+        public static double fss_b { get; set; }
+
+
+    }
 }
