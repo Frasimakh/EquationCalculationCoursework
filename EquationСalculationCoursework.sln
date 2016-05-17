@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquationСalculationCoursework", "EquationСalculationCoursework\EquationСalculationCoursework.csproj", "{073A2DA7-C188-4C5E-9200-0DFB70914B11}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{85690439-C876-4736-AA7F-7563D73C473D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{073A2DA7-C188-4C5E-9200-0DFB70914B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{073A2DA7-C188-4C5E-9200-0DFB70914B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{073A2DA7-C188-4C5E-9200-0DFB70914B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85690439-C876-4736-AA7F-7563D73C473D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85690439-C876-4736-AA7F-7563D73C473D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85690439-C876-4736-AA7F-7563D73C473D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85690439-C876-4736-AA7F-7563D73C473D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

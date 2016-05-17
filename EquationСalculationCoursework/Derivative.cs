@@ -8,19 +8,18 @@ namespace EquationСalculationCoursework
 {
     class Derivative
     {
-        protected double f(double x) 
+        public double f(double x) 
         {
             return Data.A * x * x * x + Data.B * x * x + Data.C * x + Data.D;
         }
 
-        private double fs(double x)
+        public double fs(double x)
         {
             return 3 * Data.A * x * x + 2 * Data.B * x + Data.C;
         }
-        private double fss(double x)
+        public double fss(double x)
         {
             return 6 * Data.A * x + 2 * Data.B;
         }
-
     }
 }

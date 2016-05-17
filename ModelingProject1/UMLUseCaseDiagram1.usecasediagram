@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fe2920fc-03eb-4ca9-a6d2-244705e99fe3" name="UMLUseCaseDiagram1" linkedPackageId="68dbdfc3-88ea-4eae-bc90-2563228125af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="1a1938e3-cd35-4092-ac4a-1705959f9bac">
+      <profileInstance Id="eb29c971-641f-470f-9e03-d6e11aaa8c2f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1a3f120e-d25a-42b0-bf7f-3dc8139bf646">
+      <profileInstance Id="e430767a-9c06-4915-90b7-f68c687c92cf" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="fcc6c726-e5bd-4026-8e35-577962e81bb3" name="Користувач" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e2440c2-5d5f-478e-95e6-4a83baafbb64" />
+        <targetEnds>
+          <association Id="a9ad4a9f-7b98-4aa6-b970-a71c2a399bb1" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Ввести необхідні  дані на формі" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36fd12bd-97f3-4c12-8570-61ac4c1d01c6" LastKnownName="Ввести необхідні  дані на формі" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="776e4d32-b1c2-40e4-ac6d-57bb54012998" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ce396daa-5a80-4199-b3c2-e7d82528ec69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ee6c44d3-193a-4f55-951c-ffae7bb874f4" name="Ввести необхідні  дані на формі" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d243e32d-2c94-4475-a799-94c4c5dd279e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60279bf5-a93c-4de7-83ed-4957a19b04f1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f0f742b8-dd4e-49bb-8fd5-c063f19eaab3" name="Вибрати степінь рівняння" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2ce00fba-c67c-4365-b1c1-23b4c71e1a48" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="79953041-2175-4204-825a-f3c076b253ae" name="Задати точність обчислення" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="298242ac-6980-4332-9957-2dfa25c841e1" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36fd12bd-97f3-4c12-8570-61ac4c1d01c6" name="Ввести необхідні  дані на формі" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2dea5cf-3f1e-462c-8203-ecf8e331a5a4" />
+        <targetEnds>
+          <association Id="a65916ba-f7fd-4bed-8c1a-6453f598a90e" isDerived="false" sourceEndRoleName="Ввести необхідні  дані на формі" targetEndRoleName="Отримати розвязок рівняння" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" LastKnownName="Отримати розвязок рівняння та графік функції" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="720af424-fd53-4954-8bcd-e131d4a1914f" name="Ввести необхідні  дані на формі" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="02d52561-5c04-4615-a6b2-983a500b9ccd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f2dbf8b-53a6-442a-9376-a0bb4d7dc0db" name="Отримати розвязок рівняння" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c9d47e60-4301-46d2-b6db-ececef589b18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6b7124d6-78d3-4bc9-93b5-7c3321180e17" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="5994bda3-6713-4ee1-a87a-126fa930dc0b">
+            <useCaseMoniker Id="f0f742b8-dd4e-49bb-8fd5-c063f19eaab3" LastKnownName="Вибрати степінь рівняння" />
+            <elementDefinition Id="dd873cce-800a-4e66-8da1-7133fc931d4c" />
+          </include>
+          <include Id="1c809c60-3dcc-427d-860d-68be8bffac60">
+            <useCaseMoniker Id="79953041-2175-4204-825a-f3c076b253ae" LastKnownName="Задати точність обчислення" />
+            <elementDefinition Id="af9db20e-d701-4fe4-bb0a-a37fe32a2e6a" />
+          </include>
+          <include Id="abcfd9a3-1d60-4520-b017-e3f83f7dd4f9">
+            <useCaseMoniker Id="a7b86404-4dd5-4175-9049-b806940de37a" LastKnownName="Задати межі та коефіцієнти рівняння" />
+            <elementDefinition Id="a2c1cb97-011e-43de-8ee9-e42457a266c1" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a7b86404-4dd5-4175-9049-b806940de37a" name="Задати межі та коефіцієнти рівняння" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1fa48693-2243-4a76-8186-2ab5eef0d683" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" name="Отримати розвязок рівняння та графік функції" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="974daa37-e7c3-4a09-8bd3-6a6265fa145a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="68dbdfc3-88ea-4eae-bc90-2563228125af" name="ModelingProject1">
+    <elementDefinition Id="445cc68d-7eb1-45f2-b05c-0d66de1f532e" />
+  </package>
+</useCaseModelRoot>
