@@ -22,24 +22,50 @@ namespace EquationСalculationCoursework
             Data.a = Convert.ToDouble(aInt.Text);
             Data.b = Convert.ToDouble(bInt.Text);
             Data.c = (Data.a + Data.b) / 2;
-            Data.A = Convert.ToDouble(aCoeff.Text);
-            Data.B = Convert.ToDouble(bCoeff.Text);
-            Data.C = Convert.ToDouble(cCoeff.Text);
-            Data.D = Convert.ToDouble(dCoeff.Text);
             Data.eps = Convert.ToDouble(eps.Text);
-            Derivative obj = new Derivative();
+            if (SeconddegreeToolStripMenuItem2.Checked == true)
+            {
+                Data.A = Convert.ToDouble(cCoeff.Text);
+                Data.B = Convert.ToDouble(dCoeff.Text);
+                Data.C = Convert.ToDouble(eCoeff.Text);
+            }
+            else if (ThirddegreeToolStripMenuItem1.Checked == true)
+            {
+                Data.A = Convert.ToDouble(bCoeff.Text);
+                Data.B = Convert.ToDouble(cCoeff.Text);
+                Data.C = Convert.ToDouble(dCoeff.Text);
+                Data.D = Convert.ToDouble(eCoeff.Text);
+            }
+            else
+            {
+                Data.A = Convert.ToDouble(aCoeff.Text);
+                Data.B = Convert.ToDouble(bCoeff.Text);
+                Data.C = Convert.ToDouble(cCoeff.Text);
+                Data.D = Convert.ToDouble(dCoeff.Text);
+                Data.E = Convert.ToDouble(eCoeff.Text);
+
+               
+            }
+            Base obj = new Base();
+            if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
+            if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
+            if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
             Data.f_a = obj.f(Data.a);
             Data.f_b = obj.f(Data.b);
             Data.fs_a = obj.fs(Data.a);
             Data.fs_b = obj.fs(Data.b);
             Data.fss_a = obj.fss(Data.a);
             Data.fss_b = obj.fss(Data.b);
+
             Hord();
         }
 
         private void Hord()
         {
-            Derivative obj = new Derivative();
+            Base obj = new Base();
+            if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
+            if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
+            if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
             double Xk = 0;
             double XkNew = 0;
             double XkOld = 0;
@@ -68,10 +94,53 @@ namespace EquationСalculationCoursework
 
             }
         }
-
-        private void степіньРіняToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SeconddegreeToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            FourthdegreeToolStripMenuItem.Checked = false;
+            ThirddegreeToolStripMenuItem1.Checked = false;
+            aCoeff.Visible = false;
+            label13.Visible = false;
+            bCoeff.Visible = false;
+            label12.Visible = false;
+            this.dataGridView3.Location = new System.Drawing.Point(199, 59);
+            this.dataGridView3.Size = new System.Drawing.Size(208, 42);
         }
+
+        private void ThirddegreeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FourthdegreeToolStripMenuItem.Checked = false;
+            SeconddegreeToolStripMenuItem2.Checked = false;
+            aCoeff.Visible = false;
+            label13.Visible = false;
+            bCoeff.Visible = true;
+            label12.Visible = true;
+            this.dataGridView3.Location = new System.Drawing.Point(134, 59);
+            this.dataGridView3.Size = new System.Drawing.Size(273, 42);
+           
+ 
+        }
+
+        private void FourthdegreeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThirddegreeToolStripMenuItem1.Checked = false;
+            SeconddegreeToolStripMenuItem2.Checked = false;
+            aCoeff.Visible = true;
+            label13.Visible = true;
+            bCoeff.Visible = true;
+            label12.Visible = true;
+            this.dataGridView3.Location = new System.Drawing.Point(69, 59);
+            this.dataGridView3.Size = new System.Drawing.Size(338, 42);
+        }
+
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
+
+
+
     }
 }
