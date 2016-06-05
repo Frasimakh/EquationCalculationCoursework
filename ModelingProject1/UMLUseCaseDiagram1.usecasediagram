@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fe2920fc-03eb-4ca9-a6d2-244705e99fe3" name="UMLUseCaseDiagram1" linkedPackageId="68dbdfc3-88ea-4eae-bc90-2563228125af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="fe2920fc-03eb-4ca9-a6d2-244705e99fe3" name="UMLUseCaseDiagram1" linkedPackageId="68dbdfc3-88ea-4eae-bc90-2563228125af" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <profileInstances>
-    <packageHasProfileInstances Id="1a1938e3-cd35-4092-ac4a-1705959f9bac">
-      <profileInstance Id="eb29c971-641f-470f-9e03-d6e11aaa8c2f" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+    <packageHasProfileInstances Id="c4da7d0c-2d7b-4a85-aa0e-195f162b175f">
+      <profileInstance Id="733d3029-c4dd-4883-b5c4-f0516addc5f2" name="CSharpProfile">
+        <elementDefinition Id="6bc426a5-0842-4907-87c0-13d934053a92" />
       </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1a3f120e-d25a-42b0-bf7f-3dc8139bf646">
-      <profileInstance Id="e430767a-9c06-4915-90b7-f68c687c92cf" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      <elementDefinition Id="c78ccbf6-0a86-42b0-ae35-71ceb617c370" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -53,7 +47,7 @@
         <elementDefinition Id="f2dea5cf-3f1e-462c-8203-ecf8e331a5a4" />
         <targetEnds>
           <association Id="a65916ba-f7fd-4bed-8c1a-6453f598a90e" isDerived="false" sourceEndRoleName="Ввести необхідні  дані на формі" targetEndRoleName="Отримати розвязок рівняння" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" LastKnownName="Отримати розвязок рівняння та графік функції" />
+            <useCaseMoniker Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" LastKnownName="Отримати розвязок рівняння трьома різними методами" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="720af424-fd53-4954-8bcd-e131d4a1914f" name="Ввести необхідні  дані на формі" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -67,6 +61,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="6b7124d6-78d3-4bc9-93b5-7c3321180e17" />
+          </association>
+          <association Id="27b33d44-f48c-424f-8ec5-1fd0bba1abb9" isDerived="false" sourceEndRoleName="Ввести необхідні  дані на формі" targetEndRoleName="UseCase1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a015ae66-db89-4280-b642-6451bba98965" LastKnownName="Отримати графік функції" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="05b287b4-b686-48fb-854d-8971d3b74152" name="Ввести необхідні  дані на формі" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="afacf826-3346-46e5-8a86-c1f2dff738e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="742c6467-480d-4444-b82e-a4c9fe5cd7b2" name="UseCase1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c70b9c6c-0560-4b03-969d-fa7543b1624e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3f8fa5fa-8310-498d-b07e-aa9d4a09b744" />
           </association>
         </targetEnds>
         <additions>
@@ -91,12 +101,31 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" name="Отримати розвязок рівняння та графік функції" isAbstract="false" isLeaf="false">
+      <useCase Id="69fad93e-65fe-4bbf-81dd-baa689b3b890" name="Отримати розвязок рівняння трьома різними методами" isAbstract="false" isLeaf="false">
         <elementDefinition Id="974daa37-e7c3-4a09-8bd3-6a6265fa145a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a015ae66-db89-4280-b642-6451bba98965" name="Отримати графік функції" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec7c5e2e-d348-44d9-9387-5eea15541c92" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="68dbdfc3-88ea-4eae-bc90-2563228125af" name="ModelingProject1">
     <elementDefinition Id="445cc68d-7eb1-45f2-b05c-0d66de1f532e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1a1938e3-cd35-4092-ac4a-1705959f9bac">
+        <profileInstance Id="eb29c971-641f-470f-9e03-d6e11aaa8c2f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1a3f120e-d25a-42b0-bf7f-3dc8139bf646">
+        <profileInstance Id="e430767a-9c06-4915-90b7-f68c687c92cf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

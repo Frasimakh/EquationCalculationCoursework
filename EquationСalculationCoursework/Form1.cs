@@ -20,8 +20,8 @@ namespace EquationСalculationCoursework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Data.a = Convert.ToDouble(aInt.Text);
-            Data.b = Convert.ToDouble(bInt.Text);
+            Data.a = Convert.ToInt32(aInt.Text);
+            Data.b = Convert.ToInt32(bInt.Text);
             Data.c = (Data.a + Data.b) / 2;
             Data.eps = Convert.ToDouble(eps.Text);
             if (SeconddegreeToolStripMenuItem2.Checked == true)
@@ -61,6 +61,8 @@ namespace EquationСalculationCoursework
 
             Hord();
             Bisec();
+            Newthon();
+            Graph();
         }
 
         private void Hord()
@@ -99,7 +101,8 @@ namespace EquationСalculationCoursework
         }
         private void Bisec()
         {
-            Base obj = new Base();
+ 
+          Base obj = new Base();
             if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
             if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
             if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
@@ -141,6 +144,69 @@ namespace EquationСalculationCoursework
                 gridBisec.Rows.Add("Змініть проміжок" );
             }
         }
+
+        private void Newthon()
+        {
+            double Xk;
+            double Xknew = 0;
+            double Xkold = 0;
+            gridNewthon.Rows.Clear();
+            Base obj = new Base();
+            if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
+            if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
+            if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
+            Xk = Data.b;
+            int i = 0;
+            bool end = true;
+            double delta;
+            while (end)
+            {
+
+                double fXk = obj.f(Xk);
+                double fsXk = obj.fs(Xk);
+
+                Xknew = Xk - fXk / fsXk;
+                if (i != 0) delta = Math.Abs(Xk - Xkold);
+                else delta = 0;
+                string[] row = { i.ToString(), Math.Round(Xk, 4).ToString(), Math.Round(delta, 4).ToString(), Math.Round(fXk, 4).ToString(), 
+                                 Math.Round(fsXk, 4).ToString() };
+                gridNewthon.Rows.Add(row);
+                Xkold = Xk;
+                Xk = Xknew;
+                if (i != 0) if (delta < 0.000001) end = false;
+                i++;
+            }
+        }
+
+       private void Graph()
+        {
+            chart1.Series[0].Points.Clear();
+            chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
+            chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
+            chart1.ChartAreas[0].AxisX.Crossing = 0;
+            chart1.ChartAreas[0].AxisX.LineWidth = 1;
+            chart1.ChartAreas[0].AxisY.Crossing = 0;
+            chart1.ChartAreas[0].AxisY.LineWidth = 1;
+
+            double[] x = new double[Math.Abs(Data.b) + Math.Abs(Data.a)+1];
+            double[] y = new double[Math.Abs(Data.b) + Math.Abs(Data.a)+1];
+            int step = Data.a;
+            int i = 0; ;
+            chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart1.Series[0].Color=Color.Red;
+            chart1.Series[0].BorderWidth = 2;
+            while (step <= Data.b)
+            {
+                x[i] = step;
+                if (SeconddegreeToolStripMenuItem2.Checked == true) y[i] = Data.A * step * step+ Data.B * step + Data.C;
+                if (ThirddegreeToolStripMenuItem1.Checked == true) y[i] = Data.A * step * step * step + Data.B * step * step + Data.C * step + Data.D;
+                if (FourthdegreeToolStripMenuItem.Checked == true) y[i] = Data.A * step * step * step * step + Data.B * step * step * step + Data.C * step * step + Data.D * step + Data.E;
+                chart1.Series[0].Points.AddXY(x[i], y[i]);
+                step++;
+                i++;
+            }
+        }
+
        
         private void SeconddegreeToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -184,6 +250,16 @@ namespace EquationСalculationCoursework
         {
             Application.Exit();
         }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chart1.Series[0].Points.Clear();
+            gridBisec.Rows.Clear();
+            gridNewthon.Rows.Clear();
+            gridHord.Rows.Clear();
+        }
+
+
 
 
 

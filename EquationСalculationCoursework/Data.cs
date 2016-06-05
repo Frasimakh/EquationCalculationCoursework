@@ -12,8 +12,8 @@ namespace EquationСalculationCoursework
 {
     class Data
     {
-        public static double a { get; set; }
-        public static double b { get; set; }
+        public static int a { get; set; }
+        public static int b { get; set; }
         public static double c { get; set; }
         public static double eps { get; set; }
         public static double A { get; set; }

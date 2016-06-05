@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHord = new System.Windows.Forms.TabPage();
@@ -37,6 +40,15 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDichotomy = new System.Windows.Forms.TabPage();
+            this.gridBisec = new System.Windows.Forms.DataGridView();
+            this.kColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fcColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNewthon = new System.Windows.Forms.TabPage();
             this.bInt = new System.Windows.Forms.TextBox();
             this.aInt = new System.Windows.Forms.TextBox();
@@ -46,7 +58,6 @@
             this.FourthdegreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThirddegreeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SeconddegreeToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.bCoeff = new System.Windows.Forms.TextBox();
@@ -63,23 +74,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gridBisec = new System.Windows.Forms.DataGridView();
-            this.kColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.faColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fcColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridNewthon = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deltaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fXkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fsXkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabHord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).BeginInit();
             this.tabDichotomy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).BeginInit();
+            this.tabNewthon.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -170,12 +183,88 @@
             this.tabDichotomy.Text = "Метод дихотомії";
             this.tabDichotomy.UseVisualStyleBackColor = true;
             // 
+            // gridBisec
+            // 
+            this.gridBisec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridBisec.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridBisec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridBisec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kColumn,
+            this.aColumn,
+            this.bColumn,
+            this.cColumn,
+            this.faColumn,
+            this.fb,
+            this.fcColumn,
+            this.delta});
+            this.gridBisec.Location = new System.Drawing.Point(0, 0);
+            this.gridBisec.Name = "gridBisec";
+            this.gridBisec.Size = new System.Drawing.Size(407, 240);
+            this.gridBisec.TabIndex = 1;
+            // 
+            // kColumn
+            // 
+            this.kColumn.HeaderText = "k";
+            this.kColumn.Name = "kColumn";
+            this.kColumn.Width = 40;
+            // 
+            // aColumn
+            // 
+            this.aColumn.HeaderText = "a";
+            this.aColumn.Name = "aColumn";
+            this.aColumn.ReadOnly = true;
+            this.aColumn.Width = 41;
+            // 
+            // bColumn
+            // 
+            this.bColumn.HeaderText = "b";
+            this.bColumn.Name = "bColumn";
+            this.bColumn.ReadOnly = true;
+            this.bColumn.Width = 41;
+            // 
+            // cColumn
+            // 
+            this.cColumn.HeaderText = "c";
+            this.cColumn.Name = "cColumn";
+            this.cColumn.ReadOnly = true;
+            this.cColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cColumn.Width = 40;
+            // 
+            // faColumn
+            // 
+            this.faColumn.HeaderText = "f(a)";
+            this.faColumn.Name = "faColumn";
+            this.faColumn.ReadOnly = true;
+            this.faColumn.Width = 52;
+            // 
+            // fb
+            // 
+            this.fb.HeaderText = "f(b)";
+            this.fb.Name = "fb";
+            this.fb.ReadOnly = true;
+            this.fb.Width = 52;
+            // 
+            // fcColumn
+            // 
+            this.fcColumn.HeaderText = "f(c)";
+            this.fcColumn.Name = "fcColumn";
+            this.fcColumn.ReadOnly = true;
+            this.fcColumn.Width = 51;
+            // 
+            // delta
+            // 
+            this.delta.HeaderText = "∆";
+            this.delta.Name = "delta";
+            this.delta.ReadOnly = true;
+            this.delta.Width = 42;
+            // 
             // tabNewthon
             // 
+            this.tabNewthon.Controls.Add(this.gridNewthon);
             this.tabNewthon.Location = new System.Drawing.Point(4, 25);
             this.tabNewthon.Name = "tabNewthon";
             this.tabNewthon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNewthon.Size = new System.Drawing.Size(345, 252);
+            this.tabNewthon.Size = new System.Drawing.Size(407, 252);
             this.tabNewthon.TabIndex = 1;
             this.tabNewthon.Text = "Метод ньютона";
             this.tabNewthon.UseVisualStyleBackColor = true;
@@ -194,7 +283,7 @@
             this.aInt.Name = "aInt";
             this.aInt.Size = new System.Drawing.Size(26, 20);
             this.aInt.TabIndex = 11;
-            this.aInt.Text = "-3";
+            this.aInt.Text = "-5";
             // 
             // eps
             // 
@@ -208,11 +297,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.степіньToolStripMenuItem,
-            this.очиститиToolStripMenuItem,
+            this.clearToolStripMenuItem,
             this.вихідToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1068, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -252,12 +341,6 @@
             this.SeconddegreeToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.SeconddegreeToolStripMenuItem2.Text = "Second degree";
             this.SeconddegreeToolStripMenuItem2.Click += new System.EventHandler(this.SeconddegreeToolStripMenuItem2_Click);
-            // 
-            // очиститиToolStripMenuItem
-            // 
-            this.очиститиToolStripMenuItem.Name = "очиститиToolStripMenuItem";
-            this.очиститиToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.очиститиToolStripMenuItem.Text = "Clear";
             // 
             // вихідToolStripMenuItem
             // 
@@ -410,86 +493,86 @@
             this.dataGridView1.Size = new System.Drawing.Size(102, 97);
             this.dataGridView1.TabIndex = 32;
             // 
-            // gridBisec
+            // gridNewthon
             // 
-            this.gridBisec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.gridBisec.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.gridBisec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridBisec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kColumn,
-            this.aColumn,
-            this.bColumn,
-            this.cColumn,
-            this.faColumn,
-            this.fb,
-            this.fcColumn,
-            this.delta});
-            this.gridBisec.Location = new System.Drawing.Point(0, 0);
-            this.gridBisec.Name = "gridBisec";
-            this.gridBisec.Size = new System.Drawing.Size(407, 240);
-            this.gridBisec.TabIndex = 1;
+            this.gridNewthon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridNewthon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridNewthon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridNewthon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.xkColumn,
+            this.deltaColumn,
+            this.fXkColumn,
+            this.fsXkColumn});
+            this.gridNewthon.Location = new System.Drawing.Point(0, 0);
+            this.gridNewthon.Name = "gridNewthon";
+            this.gridNewthon.Size = new System.Drawing.Size(404, 256);
+            this.gridNewthon.TabIndex = 2;
             // 
-            // kColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.kColumn.HeaderText = "k";
-            this.kColumn.Name = "kColumn";
-            this.kColumn.Width = 40;
+            this.dataGridViewTextBoxColumn1.HeaderText = "k";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 40;
             // 
-            // aColumn
+            // xkColumn
             // 
-            this.aColumn.HeaderText = "a";
-            this.aColumn.Name = "aColumn";
-            this.aColumn.ReadOnly = true;
-            this.aColumn.Width = 41;
+            this.xkColumn.HeaderText = "Xk";
+            this.xkColumn.Name = "xkColumn";
+            this.xkColumn.ReadOnly = true;
+            this.xkColumn.Width = 48;
             // 
-            // bColumn
+            // deltaColumn
             // 
-            this.bColumn.HeaderText = "b";
-            this.bColumn.Name = "bColumn";
-            this.bColumn.ReadOnly = true;
-            this.bColumn.Width = 41;
+            this.deltaColumn.HeaderText = "|delta|";
+            this.deltaColumn.Name = "deltaColumn";
+            this.deltaColumn.ReadOnly = true;
+            this.deltaColumn.Width = 69;
             // 
-            // cColumn
+            // fXkColumn
             // 
-            this.cColumn.HeaderText = "c";
-            this.cColumn.Name = "cColumn";
-            this.cColumn.ReadOnly = true;
-            this.cColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cColumn.Width = 40;
+            this.fXkColumn.HeaderText = "f(Xk)";
+            this.fXkColumn.Name = "fXkColumn";
+            this.fXkColumn.ReadOnly = true;
+            this.fXkColumn.Width = 59;
             // 
-            // faColumn
+            // fsXkColumn
             // 
-            this.faColumn.HeaderText = "f(a)";
-            this.faColumn.Name = "faColumn";
-            this.faColumn.ReadOnly = true;
-            this.faColumn.Width = 52;
+            this.fsXkColumn.HeaderText = "fs(Xk)";
+            this.fsXkColumn.Name = "fsXkColumn";
+            this.fsXkColumn.ReadOnly = true;
+            this.fsXkColumn.Width = 66;
             // 
-            // fb
+            // chart1
             // 
-            this.fb.HeaderText = "f(b)";
-            this.fb.Name = "fb";
-            this.fb.ReadOnly = true;
-            this.fb.Width = 52;
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(565, 45);
+            this.chart1.Name = "chart1";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.IsVisibleInLegend = false;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(491, 346);
+            this.chart1.TabIndex = 33;
             // 
-            // fcColumn
+            // clearToolStripMenuItem
             // 
-            this.fcColumn.HeaderText = "f(c)";
-            this.fcColumn.Name = "fcColumn";
-            this.fcColumn.ReadOnly = true;
-            this.fcColumn.Width = 51;
-            // 
-            // delta
-            // 
-            this.delta.HeaderText = "∆";
-            this.delta.Name = "delta";
-            this.delta.ReadOnly = true;
-            this.delta.Width = 42;
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 438);
+            this.ClientSize = new System.Drawing.Size(1068, 438);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -518,11 +601,14 @@
             this.tabHord.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).EndInit();
             this.tabDichotomy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).EndInit();
+            this.tabNewthon.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,7 +634,6 @@
         private System.Windows.Forms.ToolStripMenuItem FourthdegreeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ThirddegreeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem SeconddegreeToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem очиститиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox bCoeff;
@@ -574,6 +659,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fb;
         private System.Windows.Forms.DataGridViewTextBoxColumn fcColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn delta;
+        private System.Windows.Forms.DataGridView gridNewthon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xkColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deltaColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fXkColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fsXkColumn;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }
 
