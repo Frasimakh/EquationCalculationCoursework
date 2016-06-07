@@ -20,50 +20,59 @@ namespace EquationСalculationCoursework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Data.a = Convert.ToInt32(aInt.Text);
-            Data.b = Convert.ToInt32(bInt.Text);
-            Data.c = (Data.a + Data.b) / 2;
-            Data.eps = Convert.ToDouble(eps.Text);
-            if (SeconddegreeToolStripMenuItem2.Checked == true)
+            try
             {
-                Data.A = Convert.ToDouble(cCoeff.Text);
-                Data.B = Convert.ToDouble(dCoeff.Text);
-                Data.C = Convert.ToDouble(eCoeff.Text);
-            }
-            else if (ThirddegreeToolStripMenuItem1.Checked == true)
-            {
-                Data.A = Convert.ToDouble(bCoeff.Text);
-                Data.B = Convert.ToDouble(cCoeff.Text);
-                Data.C = Convert.ToDouble(dCoeff.Text);
-                Data.D = Convert.ToDouble(eCoeff.Text);
-            }
-            else
-            {
-                Data.A = Convert.ToDouble(aCoeff.Text);
-                Data.B = Convert.ToDouble(bCoeff.Text);
-                Data.C = Convert.ToDouble(cCoeff.Text);
-                Data.D = Convert.ToDouble(dCoeff.Text);
-                Data.E = Convert.ToDouble(eCoeff.Text);
+                Data.a = Convert.ToInt32(aInt.Text);
+                Data.b = Convert.ToInt32(bInt.Text);
+                Data.c = (Data.a + Data.b) / 2;
+                Data.eps = Convert.ToDouble(eps.Text);
+                if (SeconddegreeToolStripMenuItem2.Checked == true)
+                {
+                    Data.A = Convert.ToDouble(cCoeff.Text);
+                    Data.B = Convert.ToDouble(dCoeff.Text);
+                    Data.C = Convert.ToDouble(eCoeff.Text);
+                }
+                else if (ThirddegreeToolStripMenuItem1.Checked == true)
+                {
+                    Data.A = Convert.ToDouble(bCoeff.Text);
+                    Data.B = Convert.ToDouble(cCoeff.Text);
+                    Data.C = Convert.ToDouble(dCoeff.Text);
+                    Data.D = Convert.ToDouble(eCoeff.Text);
+                }
+                else
+                {
+                    Data.A = Convert.ToDouble(aCoeff.Text);
+                    Data.B = Convert.ToDouble(bCoeff.Text);
+                    Data.C = Convert.ToDouble(cCoeff.Text);
+                    Data.D = Convert.ToDouble(dCoeff.Text);
+                    Data.E = Convert.ToDouble(eCoeff.Text);
 
-               
-            }
-            Base obj = new Base();
-            if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
-            if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
-            if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
-            Data.f_a = obj.f(Data.a);
-            Data.f_b = obj.f(Data.b);
-            Data.f_c = obj.f(Data.c);
-            Data.fs_a = obj.fs(Data.a);
-            Data.fs_b = obj.fs(Data.b);
-            Data.fss_a = obj.fss(Data.a);
-            Data.fss_b = obj.fss(Data.b);
 
-            Hord();
-            Bisec();
-            Newthon();
-            Graph();
+                }
+                Base obj = new Base();
+                if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
+                if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
+                if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
+                Data.f_a = obj.f(Data.a);
+                Data.f_b = obj.f(Data.b);
+                Data.f_c = obj.f(Data.c);
+                Data.fs_a = obj.fs(Data.a);
+                Data.fs_b = obj.fs(Data.b);
+                Data.fss_a = obj.fss(Data.a);
+                Data.fss_b = obj.fss(Data.b);
+
+                Hord();
+                Bisec();
+                Newthon();
+                Graph();
+            }
+            catch
+            {
+                MessageBox.Show("Помилка вводу");
+            }
         }
+
+
 
         private void Hord()
         {
@@ -96,13 +105,11 @@ namespace EquationСalculationCoursework
                 Xk = XkNew;
                 if (i != 0) if (delta < Data.eps) end = false;
                 i++;
-
             }
         }
         private void Bisec()
         {
- 
-          Base obj = new Base();
+            Base obj = new Base();
             if (SeconddegreeToolStripMenuItem2.Checked == true) obj = new Derivative2();
             if (ThirddegreeToolStripMenuItem1.Checked == true) obj = new Derivative3();
             if (FourthdegreeToolStripMenuItem.Checked == true) obj = new Derivative4();
@@ -141,10 +148,9 @@ namespace EquationСalculationCoursework
             if ((Math.Round(c, 2) == Data.a) || (Math.Round(c, 2) == Data.b))
             {
                 gridBisec.Rows.Clear();
-                gridBisec.Rows.Add("Змініть проміжок" );
+                gridBisec.Rows.Add("Змініть проміжок");
             }
         }
-
         private void Newthon()
         {
             double Xk;
@@ -178,7 +184,7 @@ namespace EquationСalculationCoursework
             }
         }
 
-       private void Graph()
+        private void Graph()
         {
             chart1.Series[0].Points.Clear();
             chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
@@ -188,17 +194,17 @@ namespace EquationСalculationCoursework
             chart1.ChartAreas[0].AxisY.Crossing = 0;
             chart1.ChartAreas[0].AxisY.LineWidth = 1;
 
-            double[] x = new double[Math.Abs(Data.b) + Math.Abs(Data.a)+1];
-            double[] y = new double[Math.Abs(Data.b) + Math.Abs(Data.a)+1];
+            double[] x = new double[Math.Abs(Data.b) + Math.Abs(Data.a) + 1];
+            double[] y = new double[Math.Abs(Data.b) + Math.Abs(Data.a) + 1];
             int step = Data.a;
             int i = 0; ;
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chart1.Series[0].Color=Color.Red;
+            chart1.Series[0].Color = Color.Red;
             chart1.Series[0].BorderWidth = 2;
             while (step <= Data.b)
             {
                 x[i] = step;
-                if (SeconddegreeToolStripMenuItem2.Checked == true) y[i] = Data.A * step * step+ Data.B * step + Data.C;
+                if (SeconddegreeToolStripMenuItem2.Checked == true) y[i] = Data.A * step * step + Data.B * step + Data.C;
                 if (ThirddegreeToolStripMenuItem1.Checked == true) y[i] = Data.A * step * step * step + Data.B * step * step + Data.C * step + Data.D;
                 if (FourthdegreeToolStripMenuItem.Checked == true) y[i] = Data.A * step * step * step * step + Data.B * step * step * step + Data.C * step * step + Data.D * step + Data.E;
                 chart1.Series[0].Points.AddXY(x[i], y[i]);
@@ -206,8 +212,6 @@ namespace EquationСalculationCoursework
                 i++;
             }
         }
-
-       
         private void SeconddegreeToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             FourthdegreeToolStripMenuItem.Checked = false;
@@ -230,8 +234,7 @@ namespace EquationСalculationCoursework
             label12.Visible = true;
             this.dataGridView3.Location = new System.Drawing.Point(89, 45);
             this.dataGridView3.Size = new System.Drawing.Size(273, 42);
-           
- 
+
         }
 
         private void FourthdegreeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -257,14 +260,30 @@ namespace EquationСalculationCoursework
             gridBisec.Rows.Clear();
             gridNewthon.Rows.Clear();
             gridHord.Rows.Clear();
+            aCoeff.Text = "";
+            bCoeff.Text = "";
+            cCoeff.Text = "";
+            dCoeff.Text = "";
+            eCoeff.Text = "";
+            aInt.Text = "";
+            bInt.Text = "";
+            eps.Text = "";
         }
-
-
-
-
-
-
-
-
+        private void aCoeff_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 44 && ch != 45)
+            {
+                e.Handled = true;
+            }
+        }
+        private void aInt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 45)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

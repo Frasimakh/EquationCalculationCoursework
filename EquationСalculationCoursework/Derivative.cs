@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EquationСalculationCoursework
 {
     public class Base
     {
         virtual public double f(double x)
-        {
-            return x;
-        }
+        {return x;}
 
         virtual public double fs(double x)
         {

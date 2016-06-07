@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHord = new System.Windows.Forms.TabPage();
@@ -50,6 +50,7 @@
             this.fcColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNewthon = new System.Windows.Forms.TabPage();
+            this.gridNewthon = new System.Windows.Forms.DataGridView();
             this.bInt = new System.Windows.Forms.TextBox();
             this.aInt = new System.Windows.Forms.TextBox();
             this.eps = new System.Windows.Forms.TextBox();
@@ -58,6 +59,7 @@
             this.FourthdegreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThirddegreeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SeconddegreeToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.bCoeff = new System.Windows.Forms.TextBox();
@@ -74,24 +76,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gridNewthon = new System.Windows.Forms.DataGridView();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deltaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fXkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fsXkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabHord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridHord)).BeginInit();
             this.tabDichotomy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).BeginInit();
             this.tabNewthon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +142,7 @@
             this.dataGridViewTextBoxColumn5});
             this.gridHord.Location = new System.Drawing.Point(-1, -1);
             this.gridHord.Name = "gridHord";
-            this.gridHord.Size = new System.Drawing.Size(644, 253);
+            this.gridHord.Size = new System.Drawing.Size(408, 253);
             this.gridHord.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn2
@@ -199,7 +199,7 @@
             this.delta});
             this.gridBisec.Location = new System.Drawing.Point(0, 0);
             this.gridBisec.Name = "gridBisec";
-            this.gridBisec.Size = new System.Drawing.Size(407, 240);
+            this.gridBisec.Size = new System.Drawing.Size(407, 252);
             this.gridBisec.TabIndex = 1;
             // 
             // kColumn
@@ -269,6 +269,22 @@
             this.tabNewthon.Text = "Метод ньютона";
             this.tabNewthon.UseVisualStyleBackColor = true;
             // 
+            // gridNewthon
+            // 
+            this.gridNewthon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridNewthon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridNewthon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridNewthon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.xkColumn,
+            this.deltaColumn,
+            this.fXkColumn,
+            this.fsXkColumn});
+            this.gridNewthon.Location = new System.Drawing.Point(0, 0);
+            this.gridNewthon.Name = "gridNewthon";
+            this.gridNewthon.Size = new System.Drawing.Size(407, 256);
+            this.gridNewthon.TabIndex = 2;
+            // 
             // bInt
             // 
             this.bInt.Location = new System.Drawing.Point(503, 172);
@@ -276,6 +292,7 @@
             this.bInt.Size = new System.Drawing.Size(26, 20);
             this.bInt.TabIndex = 12;
             this.bInt.Text = "5";
+            this.bInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aInt_KeyPress);
             // 
             // aInt
             // 
@@ -284,6 +301,7 @@
             this.aInt.Size = new System.Drawing.Size(26, 20);
             this.aInt.TabIndex = 11;
             this.aInt.Text = "-5";
+            this.aInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aInt_KeyPress);
             // 
             // eps
             // 
@@ -292,6 +310,7 @@
             this.eps.Size = new System.Drawing.Size(43, 20);
             this.eps.TabIndex = 13;
             this.eps.Text = "0,001";
+            this.eps.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // menuStrip1
             // 
@@ -342,6 +361,13 @@
             this.SeconddegreeToolStripMenuItem2.Text = "Second degree";
             this.SeconddegreeToolStripMenuItem2.Click += new System.EventHandler(this.SeconddegreeToolStripMenuItem2_Click);
             // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
@@ -364,6 +390,7 @@
             this.bCoeff.Size = new System.Drawing.Size(26, 20);
             this.bCoeff.TabIndex = 17;
             this.bCoeff.Text = "-1";
+            this.bCoeff.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // cCoeff
             // 
@@ -372,6 +399,7 @@
             this.cCoeff.Size = new System.Drawing.Size(27, 20);
             this.cCoeff.TabIndex = 18;
             this.cCoeff.Text = "-3,8";
+            this.cCoeff.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // dCoeff
             // 
@@ -380,6 +408,7 @@
             this.dCoeff.Size = new System.Drawing.Size(26, 20);
             this.dCoeff.TabIndex = 19;
             this.dCoeff.Text = "-2,6";
+            this.dCoeff.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // eCoeff
             // 
@@ -388,6 +417,7 @@
             this.eCoeff.Size = new System.Drawing.Size(26, 20);
             this.eCoeff.TabIndex = 20;
             this.eCoeff.Text = "0,9";
+            this.eCoeff.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // label10
             // 
@@ -440,6 +470,7 @@
             this.aCoeff.Size = new System.Drawing.Size(26, 20);
             this.aCoeff.TabIndex = 27;
             this.aCoeff.Text = "-5";
+            this.aCoeff.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aCoeff_KeyPress);
             // 
             // label5
             // 
@@ -493,21 +524,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(102, 97);
             this.dataGridView1.TabIndex = 32;
             // 
-            // gridNewthon
+            // chart1
             // 
-            this.gridNewthon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.gridNewthon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.gridNewthon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridNewthon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.xkColumn,
-            this.deltaColumn,
-            this.fXkColumn,
-            this.fsXkColumn});
-            this.gridNewthon.Location = new System.Drawing.Point(0, 0);
-            this.gridNewthon.Name = "gridNewthon";
-            this.gridNewthon.Size = new System.Drawing.Size(404, 256);
-            this.gridNewthon.TabIndex = 2;
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(565, 45);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.IsVisibleInLegend = false;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(491, 346);
+            this.chart1.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -524,10 +556,10 @@
             // 
             // deltaColumn
             // 
-            this.deltaColumn.HeaderText = "|delta|";
+            this.deltaColumn.HeaderText = "∆";
             this.deltaColumn.Name = "deltaColumn";
             this.deltaColumn.ReadOnly = true;
-            this.deltaColumn.Width = 69;
+            this.deltaColumn.Width = 42;
             // 
             // fXkColumn
             // 
@@ -542,30 +574,6 @@
             this.fsXkColumn.Name = "fsXkColumn";
             this.fsXkColumn.ReadOnly = true;
             this.fsXkColumn.Width = 66;
-            // 
-            // chart1
-            // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(565, 45);
-            this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.IsVisibleInLegend = false;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(491, 346);
-            this.chart1.TabIndex = 33;
-            // 
-            // clearToolStripMenuItem
-            // 
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -603,11 +611,11 @@
             this.tabDichotomy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridBisec)).EndInit();
             this.tabNewthon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridNewthon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -660,13 +668,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fcColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn delta;
         private System.Windows.Forms.DataGridView gridNewthon;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn xkColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deltaColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fXkColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fsXkColumn;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }
 
